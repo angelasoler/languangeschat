@@ -3,8 +3,23 @@
     <div class="navbar-header">
       <%= link_to 'LanguagesChat', root_path, class: 'navbar-brand mb-0 h1' %>
     </div>
-    <div class="btn btn-outline-info mr-2"%>
-      <%= link_to 'Login', new_user_session %>
-    </div>
+    <% if user_signed_in? %>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle">
+              <%= current_user.user_name %>
+            </a>
+          </li> 
+          <li class="nav-item">
+            <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "btn btn-outline-info mr-2" %>
+          </li>
+        </ul>
+      </div>
+    <% else %>
+      <div class="btn btn-outline-info mr-2"%>
+        <%= link_to 'Login', new_user_session_path %>
+      </div>
+    <% end %>
   </div>
 </nav>

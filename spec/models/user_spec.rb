@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   describe "validations#" do
     it 'validates presences of attributes' do
-      should validate_presence_of(:email)
-      should validate_presence_of(:password)
-      should validate_presence_of(:user_name)
+      should validate_presence_of(:email).with_message('não pode ficar em branco.')
+      should validate_presence_of(:password).with_message('não pode ficar em branco.')
+      should validate_presence_of(:user_name).with_message('não pode ficar em branco.')
     end
 
     it 'validate enum' do
