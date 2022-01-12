@@ -3,10 +3,10 @@ require 'rails_helper'
 describe 'visitor logs in' do
   it 'and makes an account' do
     visit root_path
-    click_on 'Faça Login'
+    click_on 'Login'
     click_on 'Cadastre-se'
     fill_in 'Email', with: 'usuario@gmail.com'
-    fill_in 'Senha', with: '123356'C
+    fill_in 'Senha', with: '123356'
     fill_in 'Confirme a senha', with: '123356'
     click_on 'Enviar'
 
@@ -16,7 +16,7 @@ describe 'visitor logs in' do
 
   it 'successfully' do
     visit root_path
-    click_on 'Faça Login'
+    click_on 'Login'
     fill_in 'Email', with: 'usuario@gmail.com'
     fill_in 'Senha', with: '123356'
     click_on 'Enviar'

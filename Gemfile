@@ -14,6 +14,7 @@ gem 'webpacker', '~> 5.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'cancancan'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -27,6 +28,7 @@ group :development, :test do
   gem 'rubocop-rails', require: false
   gem 'shoulda-matchers', '~> 5.0'
   gem 'simplecov', require: false
+  gem 'faker', '~> 2.19.0'
 end
 
 group :development do
